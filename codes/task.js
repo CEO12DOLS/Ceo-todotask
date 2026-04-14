@@ -15,15 +15,9 @@ function displayTime() {
   const duetime = timeDue()
    left.textContent = "Ends in " + duetime + " days"
 
-   if (remaining <= 0) {
-    clearInterval(timerInterval);
-    left.textContent = "Task has ended"
-   } else {
-    left.textContent = "Ends in " + duetime + " days"
-   }
 }
 displayTime();
-const timerInterval = setInterval(displayTime, 60000);
+setInterval(displayTime, 60000)
 
 
 //CHECKBOX FUNCTION
