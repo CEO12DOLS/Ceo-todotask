@@ -11,9 +11,11 @@
     <section role="region" data-testid="test-todo-card" class="card">
       <section class="card-task">
         <section class="card-head">
-          <h2 data-testid="test-todo-title">TESTABLE TASK CARD</h2>
+          <h2 data-testid="test-todo-title" class="title">
+            TESTABLE TASK CARD
+          </h2>
 
-          <span data-testid="test-todo-priority" class="priority">MEDIUM</span>
+          <span data-testid="test-todo-piority" class="piority">HIGH</span>
         </section>
 
         <p data-testid="test-todo-description" class="task">
@@ -21,8 +23,8 @@
         </p>
       </section>
 
-      <time datetime="" data-testid="test-todo-due-date"
-        >Due April 17 2026</time
+      <time datetime="" data-testid="test-todo-due-date" class="initial-date"
+        >Due April 19 2026</time
       >
 
       <time
@@ -56,6 +58,66 @@
         </button>
       </section>
     </section>
+
+      <!--Edit form-->
+      <section data-testid="test-todo-edit-form" class="edit-form">
+        <label for="edit-input" class="label-title">TITLE</label>
+        <input
+          type="text"
+          name=""
+          id=""
+          data-testid="test-todo-edit-title-input"
+          class="edit-input"
+        />
+        <label for="edit-text" class="label-task">DESCRIPTION</label>
+        <textarea
+          name=""
+          id=""
+          data-testid="test-todo-edit-description-input"
+          class="edit-text"
+        ></textarea>
+        <label for="" style="margin-top: 15px; display: block">PIORITY</label>
+        <select
+          name=""
+          id=""
+          data-testid=""
+          class="select"
+          onchange="piorityfunc()"
+        >
+          <option value="HIGH" data-testid="test-todo-edit-piority-select">
+            HIGH
+          </option>
+          <option value="MEDIUM" data-testid="test-todo-edit-piority-select">
+            MEDIUM
+          </option>
+          <option value="LOW" data-testid="test-todo-edit-piority-select">
+            LOW
+          </option>
+        </select>
+        <label for="" style="margin-bottom: 15px; display: block"
+          >DUE DATE</label
+        >
+        <input
+          type="date"
+          name=""
+          id=""
+          data-testid="test-todo-edit-due-date-input"
+          class="edit-date"
+        />
+        <label for="" style="margin-top: 15px; display: block">STATUS</label>
+        <select name="" id="state" onchange="statusfunc()">
+          <option value="In Progress">In Progress</option>
+          <option value="Done">Done</option>
+          <option value="Pending">Pending</option>
+        </select>
+        <button data-testid="test-todo-save-button" class="save-btn">
+          Save
+        </button>
+        <button data-testid="test-todo-cancel-button" class="cancel-btn">
+          Cancel
+        </button>
+      </section>
+    
 
     <script src="codes/task.js"></script>
   </body>
