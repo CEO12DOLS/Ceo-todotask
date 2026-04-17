@@ -149,6 +149,12 @@ textarea{
     border: none;
     height: 90px;
     width: 300px;
+    resize: none;
+}
+@media (max-width: 500px) {
+    textarea{
+        width: 200px;
+    }
 }
 select{
     display: block;
